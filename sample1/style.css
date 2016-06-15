@@ -7,6 +7,11 @@
 
 header .container{
   display: table;
+  table-layout: fixed;
+}
+
+.menu-trigger{
+  display: none;
 }
 
 header nav{
@@ -21,4 +26,15 @@ nav ul li{
   padding: 5px 10px;
   border: 1px solid #000;
   border-radius: 5px;
+}
+
+@media screen and (max-width: 640px){
+  header nav {
+    display: none;
+  }
+  header .container .menu-trigger{
+    position: absolute;
+    right: 10px;
+    top: 10px;
+  }
 }
